@@ -6,7 +6,7 @@ const WebpackBar = require("webpackbar");
  
 // console.log("DIRNAME", __dirname); // глобальная переменная, содержащая абсолютный путь к файлу
 const loadModeConfig = (env) =>
-  require(`./build-utils/${env.mode}.config`)(env);
+  require(`./build-utils/${env.mode}.config.js`)(env);
 // экспорт объекта настроек
 module.exports = (env) =>
   merge(
