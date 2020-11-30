@@ -1,5 +1,5 @@
 {
-  "name": "hw-js-09",
+  "name": "webpack_bundle",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,26 +11,25 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Tat-Obmetitsa/hw-js-09.git"
+    "url": "git+https://github.com/paris-school/webpack_bundle.git"
   },
   "keywords": [],
-  "author": "Tetiana O",
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Tat-Obmetitsa/hw-js-09/issues"
+    "url": "https://github.com/paris-school/webpack_bundle/issues"
   },
-  "homepage": "https://github.com/Tat-Obmetitsa/hw-js-09#readme",
+  "homepage": "https://github.com/paris-school/webpack_bundle#readme",
   "devDependencies": {
-    "@babel/core": "^7.12.8",
+    "@babel/core": "^7.12.9",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
     "@babel/preset-env": "^7.12.7",
-    "autoprefixer": "^10.0.2",
-    "babel-loader": "^8.2.1",
+    "autoprefixer": "^10.0.4",
+    "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^5.0.1",
     "file-loader": "^6.2.0",
     "friendly-errors-webpack-plugin": "^1.7.0",
-    "gh-pages": "^3.1.0",
     "handlebars": "^4.7.6",
     "handlebars-loader": "^1.7.1",
     "html-loader": "^1.3.2",
@@ -40,12 +39,15 @@
     "postcss": "^8.1.10",
     "postcss-loader": "^4.1.0",
     "style-loader": "^2.0.0",
-    "url-loader": "^4.1.1"
+    "url-loader": "^4.1.1",
+    "webpackbar": "^5.0.0-3"
   },
   "dependencies": {
-    "webpack": "^4.44.1",
+    "gh-pages": "^3.1.0",
+    "validator": "^13.5.1",
+    "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
-    "webpack-merge": "^5.1.4"
+    "webpack-merge": "^5.4.0"
   }
 }

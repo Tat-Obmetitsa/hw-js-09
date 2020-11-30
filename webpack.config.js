@@ -1,33 +1,31 @@
 const path = require("path");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const { merge } = require("webpack-merge");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin");
 const WebpackBar = require("webpackbar");
- 
-// console.log("DIRNAME", __dirname); // глобальная переменная, содержащая абсолютный путь к файлу
+
 const loadModeConfig = (env) =>
   require(`./build-utils/${env.mode}.config.js`)(env);
-// экспорт объекта настроек
+
 module.exports = (env) =>
   merge(
     {
       mode: env.mode,
       context: path.resolve(__dirname, "src"),
-      // 1. точка входа - откуда строить дерево зависимостей
+
       entry: "./index.js",
-      // 2. куда положить результирующий бандл
       output: {
         path: path.resolve(__dirname, "dist"),
         filename: "[name].bundle.js",
       },
-      // 3. загрузчики (loaders)
       module: {
         rules: [
           {
-            test: /\.js$/, // регулярное выражение
-            exclude: /node_modules/, // через указ папку свойства не прогонять
+            test: /\.js$/,
+            exclude: /node_modules/,
             use: ["babel-loader"],
           },
+          { test: /\.hbs$/, exclude: /node_modules/, use: "handlebars-loader" },
           {
             test: /\.html$/,
             use: ["html-loader"],
@@ -49,7 +47,6 @@ module.exports = (env) =>
             use: ["handlebars-loader"],
           },
         ],
-        // плагины применяются к результирующему бандлу
       },
       plugins: [
         new CleanWebpackPlugin(),
@@ -57,5 +54,8 @@ module.exports = (env) =>
         new WebpackBar(),
       ],
     },
-    loadModeConfig(env)
+    
+    loadModeConfig(env),
+    
   );
+  
