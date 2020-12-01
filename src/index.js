@@ -1,5 +1,6 @@
 import css from "./css/styles.css";
-import menuTemplate from "/path/to/templates/templates.hbs";
+import menuTemplate from "/path/to/templates/templatesnpm.hbs";
+
 
 const menuData = {
   title: "Eat it createElement, templates rule!",
